@@ -19,7 +19,7 @@ function Signout() {
   sessionStorage.removeItem('user');
   localStorage.removeItem('user');
   localStorage.removeItem('keepLoggedIn');
-  window.location = 'home.html';
+  window.location = 'index.html';
 }
 
 window.onload = function () {

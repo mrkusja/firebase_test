@@ -62,11 +62,11 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.13.0/firebas
 
         if (!keepLoggedIn) {
           sessionStorage.setItem('user', JSON.stringify(user));
-          window.location = 'home.html';
+          window.location = 'index.html';
         } else {
           localStorage.setItem('keepLoggedIn', 'yes');
           localStorage.setItem('user', JSON.stringify(user));
-          window.location = 'home.html';
+          window.location = 'index.html';
         }
       }
 
