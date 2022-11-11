@@ -1,0 +1,63 @@
+@media screen and (max-width:1199px) {
+    .about {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about__item {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .about__cards {
+            position: relative;
+            flex-basis: calc((100% - 60px) / 3);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+            &:not(:nth-child(3n)) {
+                margin-right: 30px;
+            }
+    
+            &:not(:nth-last-child(-n+3)) {
+                margin-bottom: 30px;
+            }
+        }
+    
+        .about {
+            background-color: var(--about-us-background-color);
+            padding-top: 0;
+        }
+    
+        .about__title {
+            font-family: var(--primary-font);
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.17;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: var(--sections-titles-color);
+        }
+    
+        .about-projects {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 370px;
+            height: 70px;
+            background-color: rgba(47, 48, 58, 0.8);
+        }
+    
+        .about-projects__title {
+            font-family: var(--primary-font);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+}

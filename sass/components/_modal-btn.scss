@@ -1,0 +1,23 @@
+.modal-btn {
+    font-family: var(--primary-font);
+    @include font(16px, 700, 30px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    min-width: 200px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    margin: 0 auto;
+    color: var(--modal-btn-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+            background-color: var(--modal-btn-background-hover-color);
+    }
+}

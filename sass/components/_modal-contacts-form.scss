@@ -1,0 +1,173 @@
+.modal-contacts-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.modal-contacts-form-title {
+    margin-bottom: 12px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+
+.modal-contacts-form-field {
+    margin-bottom: 10px;
+}
+
+.modal-contacts-form-field-last {
+    margin-bottom: 20px;
+}
+
+.modal-contacts-form-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+    }
+}
+
+.modal-contacts-form-field-key {
+    display: block;
+    margin-bottom: 4px;
+    font-family: var(--primary-font);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--sections-text-color);
+}
+
+.modal-contacts-form-wrapper {
+    position: relative;
+    display: block;
+}
+
+.modal-contacts-form-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #212121;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal-contacts-form-input:focus + & {
+        fill: var(--accent-color);
+    }
+}
+
+.modal-contacts-form-message {
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    padding: 12px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+    }
+
+    &::placeholder {
+        font-family: var(--primary-font);
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.modal-contacts-form-checkbox-lable {
+    @extend %align;
+    flex-wrap: wrap;
+    font-family: var(--primary-font);
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin-bottom: 30px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 15px;
+        border: 2px solid #212121;
+        border-radius: 2px;
+        margin-right: 7px;
+        cursor: pointer;
+
+        .modal-contacts-form-checkbox:checked+& {
+            background-color: var(--accent-color);
+            border: none;
+            background-image: url(../images/modal/vector.svg);
+            background-repeat: no-repeat;
+            background-size: auto auto;
+            background-position: 50% 50%;
+        }
+
+        .modal-contacts-form-checkbox:focus+& {
+            border-color: var(--accent-color);
+        }
+    }
+}
+
+.modal-contacts-form-checkbox-icon {
+    fill: transparent;
+    border: 2px solid #212121;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 7px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-contacts-form-btm {
+    min-width: 200px;
+    align-self: center;
+    padding: 10px 56px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--modal-btn-text-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    border-color: transparent;
+    border-radius: 4px;
+    transition: background-color var(--transition-data);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    &:hover,
+    &:focus {
+        background-color: var(--modal-btn-background-hover-color);
+    }
+}
+
+.modal-form-rules-link {
+    color: var(--accent-color);
+}
+
+@media screen and (max-width: 1199px) {
+    .modal-contacts-form-checkbox-lable {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .modal-contacts-form-checkbox-lable {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+}

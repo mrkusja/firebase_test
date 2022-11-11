@@ -1,0 +1,97 @@
+   .our-team {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+   }
+
+    .team {
+        background-color: var(--our-team-background-color);
+    }
+
+    .team-cards {
+        background-color: var(--our-team-cards-background-color);
+        border-radius: 0 0 4px 4px;
+        box-shadow:
+            0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-cards-content {
+            padding-top: 30px;
+            padding-bottom: 24px;
+        }
+
+    .team-title {
+        font-family: var(--primary-font);
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.18;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--sections-titles-color);
+    }
+
+    .team-title-name {
+        font-family: var(--primary-font);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--sections-titles-color);
+        margin-bottom: 10px;
+    }
+
+    .team-position {
+        font-family: var(--primary-font);
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--sections-text-color);
+        margin-bottom: 16px;
+    }
+
+@media screen and (max-width: 767px) {
+    .team-cards:not(:last-child) {
+         margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .team-cards {
+        flex-basis: calc((100% - 30px) / 2);
+                   
+        &:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+    
+        &:not(:nth-last-child(-n+2)) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .team-cards {
+        flex-basis: calc((100% - 90px) / 4);
+   
+        &:not(:nth-child(4n)) {
+            margin-right: 30px;
+        }
+    
+        &:not(:nth-last-child(-n+4)) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .team-title {
+        font-size: 36px;
+        line-height: 1.17;
+        }
+    
+    .team-cards-content {
+        padding-bottom: 30px;
+    }
+}
